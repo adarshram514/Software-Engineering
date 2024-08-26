@@ -1,0 +1,40 @@
+{
+  "name": "cs3398-react-calculator",
+  "homepage": "https://cs3398reactcalculator.firebaseapp.com/",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "gh-pages": "^5.0.0",
+    "prettier": "^1.17.1",
+    "react-scripts": "^5.0.1"
+  },
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "enzyme-adapter-react-16": "^1.15.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^6.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
