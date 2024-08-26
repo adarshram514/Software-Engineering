@@ -1,0 +1,40 @@
+#  Template python-build
+
+#  This template allows you to validate your python code.
+#  The workflow allows running tests and code linting on the default branch.
+
+image: python:3.8
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Test
+          caches:
+            - pip
+          script:
+            - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            - pip install pytest
+            - pytest -v tests/* --junitxml=test-reports/report.xml
+      - step:
+          name: Lint code
+          script:
+            # Enforce style consistency across Python projects https://flake8.pycqa.org/en/latest/
+            - pip install flake8
+            - flake8 . --config .flake8 --show-source --statistics
+      - step:
+          name: Deploy to test
+          deployment: test
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:
+            - echo "Deploying to test environment"
+            - pipe: atlassian/firebase-deploy:3.1.1
+              variables:
+                KEY_FILE: '<string>'
+                FIREBASE_TOKEN: '<string>'
+                # PROJECT_ID: '<string>' # Optional.
+                # NODE_JS_VERSION: '<string>' # Optional.
+                # MESSAGE: '<string>' # Optional.
+                # EXTRA_ARGS: '<string>' # Optional.
+                # MULTI_SITES_CONFIG: '<json>' # Optional
+                # DEBUG: '<boolean>' # Optional.
