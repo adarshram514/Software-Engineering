@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Draw me</h2>
+
+{% if success %}
+<p> <b> You asked me to draw: </b> "{{ draw_me_prompt }}" </p>
+<p> <b> OpenAI revised it to: </b> "{{ revised_prompt }}" </p>
+<img src="{{ draw_me_response }}" alt="Generated Image">
+{% else %}
+<div class="flash">
+    {% for error in form.prompt.errors %}
+    <div>{{ error }}</div>
+    {% endfor %}
+</div>
+
+<form action="{{ url_for('drawme') }}" method="post">
+    {{ form.prompt.label }} {{ form.prompt }}
+    {{ form.image_quality.label }} {{ form.image_quality }}
+    {{ form.image_size.label }} {{ form.image_size }}
+    {{ form.submit }}
+    <p> It will likely take a few seconds for the drawing to appear.   </p>
+</form>
+{% endif %}
+
+{% endblock %}
