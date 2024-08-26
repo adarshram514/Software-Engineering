@@ -1,0 +1,420 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+    background-image: linear-gradient(#0B1089 0%, #000000 45%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat:no-repeat;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  min-width: 500px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  flex-grow: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+ justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 40px;
+}
+
+.navbar__menu {
+  justify-content: space-between;
+  overflow: hidden;
+  display: flex;
+  list-style-type: none;
+  margin-right: .5rem;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  margin-top: 25px;
+}
+
+.logo img {
+  width: 300px; 
+  height: auto; 
+}
+
+.navbar__menu__item {
+  margin-left: 1rem;
+  font-weight: 700;
+  font-family: 'Open Sans Hebrew', serif;
+  font-size: 23px;
+  padding: 20px 30px;
+  color: black;
+}
+
+.navbar__menu__item:hover{
+  color: rgb(18, 23, 172);
+}
+
+.navbar__menu__item:first-child {
+  margin-left: 0;
+}
+
+.navbar__menu__item.special {
+  border-radius: 15px;
+  color: white;
+  background-color: rgb(11, 16, 137);
+}
+.navbar__menu__item.special:hover{
+  box-shadow: inset 0 0 15px #000000;
+}
+
+.firstpage {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: calc(100vh - 100px) /* Adjust for navbar height */
+  }
+
+.tagline {
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+  font-size: 46px;
+}
+
+.graph {
+  margin-top: 60px;
+}
+
+.graph img{
+  width: 850px; 
+  height: auto; 
+}
+
+.secondpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 400px) /* Adjust for navbar height */
+  
+}
+
+.wecare {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+.middleline {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.middleline img{
+  align-items: right;
+  margin-top: 20px;
+  padding-right: 200px;
+}
+
+.textpushleft {
+  text-align: right;
+  margin-top: 20px;
+  padding-left: 200px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Open Sans Hebrew', serif;
+}
+
+.textpushright {
+  text-align: left;
+  margin-top: 20px;
+  padding-right: 200px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Open Sans Hebrew', serif;
+}
+
+.line-in-middle {
+  margin-top: 50px;
+  width:700px;
+  height:450px;
+  background: linear-gradient( to right,
+                              transparent 0%, 
+                              transparent calc(50% - 0.81px), 
+                              rgb(255, 255, 255) calc(50% - 0.8px), 
+                              rgb(255, 255, 255) calc(50% + 0.8px), 
+                              transparent calc(50% + 0.81px), 
+                              transparent 100%); 
+}
+
+.thirdpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  font-family: 'Open Sans Hebrew', serif;
+}
+
+.ourstory {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+.story {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-bottom: 200px;
+}
+
+.footer{
+  width: 100%; 
+  height: 230px; 
+  background-color: rgb(59, 59, 90);
+
+}
+
+.terms {
+  color: white;
+  font-size: 24px;
+  line-height: 1.5;
+  padding: 100px 20px 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.terms h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.terms h4 {
+    font-size: 60px;
+    text-align: center;  
+}
+
+.terms dt {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.terms dd {
+  margin-left: 20px;
+}
+
+.prompt-container {
+  margin: 50px auto; /* Keep the top and bottom margin */
+  width: 80%;
+  max-width: 600px;
+  display: flex; /* Add this */
+  justify-content: center; /* Add this */
+}
+
+.prompt-form {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    background-image: linear-gradient(179deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 103.9% );
+}
+
+.prompt-form label{
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+#freeform {
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  background: white;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+         
+.btn-grad {
+  background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+         
+.btn-grad2 {
+  background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad2:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forum-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.post {
+  background-color: #76a0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post .likes {
+  margin-top: 10px;
+}
+
+.post .likes button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post .likes button:hover {
+  background-color: #218838;
+}
+
+.question {
+  color: white;
+}
+
+.pagecontent {
+  display: none;
+  align-items: center;
+  height: 40rem;
+  color: white;
+  width: 30rem;
+}
+
+.post .comments {
+  margin-top: 20px;
+}
+
+.comment {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.comment .username {
+  font-weight: bold;
+}
+
+.comment form {
+  margin-top: 10px;
+}
+
+.comment form textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.comment form button {
+  margin-top: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment form button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}

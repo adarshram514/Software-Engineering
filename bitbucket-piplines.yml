@@ -1,0 +1,16 @@
+image: python:3.10.0
+
+pipelines:
+  default:
+    - step:
+      name: Install dependencies
+      script:
+        - pip install -r requirements.txt
+    - step:
+      name: Run tests
+      script:
+        - python -m unittest test_database_connection
+    - step:
+      name: Start server
+      script:
+        - python3 runserver.py

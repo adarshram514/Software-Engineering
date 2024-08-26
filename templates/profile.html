@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- icons -->
+    <div class="profile">
+        <div class="profile-data">
+            <div class="profile-info">
+                <h1 class="profile-title">User Profile</h1>
+                <div class="profile-info-image">
+                    <img src="{{ image_data_url }}" alt="Profile Picture">
+                    <p class="profile-info-item username">{{ user.username }}</p>
+                </div>
+                <span class='short-line'></span>
+                <p class="profile-info-item">Email: <span>{{ user.email }}</span></p>
+                <p class="profile-info-item">Member since: <span>{{ user.member_since.strftime('%Y-%m-%d')}}</span></p>
+                <p class="profile-info-item">Ranking: <span> {{ rank_name }} </span></p>
+                <span class='short-line'></span>
+                <a class="profile-info-generate" href="{{ url_for('generate_picture.generate_picture') }}">Generate Picture</a>
+                <p>or</p>
+                <form class="profile-info-upload" method="POST" action="{{ url_for('upload_picture') }}" enctype="multipart/form-data">
+                    <button type="submit">Upload Picture</button>
+                    <input type="file" name="profile_picture" accept=".png">
+                </form>
+            </div>
+            <hr/>
+            <div class="profile-change">
+                <h1 class="profile-title">Security</h1>
+                <div class="profile-change-buttons">
+                    <a class="profile-change-buttons-item" href="{{ url_for('security') }}">Change Username</a>
+                    <span class='short-line'></span>
+                    <a class="profile-change-buttons-item" href="{{ url_for('security') }}">Change Password</a>
+                </div>
+            </div>
+            <hr/>
+            <div class="profile-logout">
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+        <div class="profile-experience">
+            <div class="Technical-bars">
+                <div class="bar"><i style= "color:aliceblue;">
+                    <div class="info">
+                        <!-- Display the experience data here -->
+                        <span>Total XP: {{ experience}} </span>
+                        <br>
+                        <span>XP Until Level Up: {{ experience % 60 }} / 60</span>
+                    </div>
+                    <div class="progress-line" style=" width:100%">
+                        <div class="progress-bar" style="width: {{ experience % 60 }}%;"></div>
+                    </div>
+                    <div class="user-icon">
+                        <i class="{{ icon_class }}"></i>
+                        <span>{{ rank_name }}</span>
+                    </div>
+                    <hr class="experience-info">
+                    <p>This is your Experience Bar!</p>
+                    <br>
+                    <p>As you explore this website and expand</p>
+                    <p>your knowledge of the stock market, you</p>  
+                    <p>will earn experience points.</p>
+                    <br>
+                    <p>These points serve as measure of your</p>
+                    <p>understanding and provide a visual</p>
+                    <p>representation of your improvement.</p>
+                    <br>
+                    <p>The best way to earn points will be</p>
+                    <p>through interaction with our features.</p>
+                    <br
+                    <p>This includes but not limited too:</p>
+                    <p style="margin-left: 20px;"">- Taking the quiz in the learn tab.</p> 
+                    <p style="margin-left: 20px;">- Posting and answering questions</p>
+                    <p style="margin-left: 30px;">in the forum tab.</p>                        
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

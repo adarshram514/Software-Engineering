@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(#0B1089 0%, #000000 62%);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+  }
+
+.register__heading {
+    padding-top: 20px;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 4.5rem;
+    font-weight: 750;
+    text-align: center;
+}
+
+.register__content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 45px;
+    min-width: 800px;
+    width: 700px;
+    height: calc(100vh - 100px);
+    margin: 150px auto 2rem auto;
+    gap: .5rem;
+    color: white;
+    background-image: linear-gradient(#0B1089 0%, #000000 62%);
+}
+
+.register__form {
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register__form__item__name {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 250;
+    margin-bottom: .5rem;
+}
+
+.register__form__item {
+    margin-bottom: 1rem;
+}
+
+.register__form__item:last-child {
+    margin-bottom: 0;
+}
+
+.register__content form input[type="text"],
+.register__content form input[type="email"],
+.register__content form input[type="password"]{
+    width: 100%; 
+    height: 1rem;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.register__content form input[type="submit"],
+#generateUsernameBtn {
+    width: 28%;
+    height: 3rem;
+    padding: 0.5rem 0.75rem;
+    margin-top: 1.2rem;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 350;
+    background-color: white;
+}
+
+.register__content form input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    border-radius: 45px;
+    border: none;
+}
+
+.register__content form input[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+#generateUsernameBtn{
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    width: 48%;
+    font-size: 18px;
+    border-radius: 45px;
+    border: none;
+}
+
+#generateUsernameBtn:hover {
+    transform: scale(1.05);
+}
+

@@ -1,0 +1,162 @@
+{
+
+    "easy_cards":[
+        {
+            "front": "Definition of a stock", 
+            "back": "A stock represents ownership in a company. When you buy a stock, you own a piece of that company.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of the stock market", 
+            "back": "The stock market is a collection of markets where stocks (pieces of ownership in businesses) are bought and sold.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a dividend", 
+            "back": "A dividend is a portion of a company's earnings that is paid to shareholders, or people who own that company's stock.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a bull market", 
+            "back": "A bull market is a period during which stock prices are rising or are expected to rise.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a bear market", 
+            "back": "A bear market is a period during which stock prices are falling or are expected to fall.", 
+            "known": "0"
+        },
+        {
+            "front": "IPO acronym", 
+            "back": "Initial Public Offering. It's when a company first sells shares to the public.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a brokerage", 
+            "back": "A brokerage is a firm that facilitates the buying and selling of investments, like stocks, from a stock exchange.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a stock index", 
+            "back": "A stock index is a measurement of a section of the stock market. It is computed from the prices of selected stocks.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of blue-chip stocks", 
+            "back": "Blue-chip stocks are shares in large, reputable companies known for their ability to endure tough market conditions and generate profits.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of market capitalization", 
+            "back": "Market capitalization is the total market value of a company's outstanding shares of stock. It's calculated by multiplying the company's share price by its total number of shares outstanding.", 
+            "known": "0"
+        }
+    ],
+    
+    "medium_cards":[
+        {
+            "front": "Definition of P/E ratio", 
+            "back": "Price-to-Earnings ratio is a valuation metric used to measure a company's current share price relative to its per-share earnings.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of short selling", 
+            "back": "Short selling is a trading strategy that speculates on the decline in a stock or other securities price.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of ETFs", 
+            "back": "Exchange-Traded Funds are investment funds that are traded on stock exchanges, much like stocks. They hold assets such as stocks, commodities, or bonds.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a bond", 
+            "back": "A bond is a fixed income investment in which an investor loans money to an entity (corporate or governmental) that borrows the funds for a defined period at a fixed interest rate.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of portfolio diversification", 
+            "back": "Portfolio diversification is an investment strategy that involves spreading your investments across various asset classes to reduce risk.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a mutual fund", 
+            "back": "A mutual fund is an investment program funded by shareholders that trades in diversified holdings and is professionally managed.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a limit order", 
+            "back": "A limit order is an order to buy or sell a stock at a specific price or better.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of a market order", 
+            "back": "A market order is an order to buy or sell a stock at the best available price.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of fundamental analysis", 
+            "back": "Fundamental analysis is a method of measuring a stock's intrinsic value by examining related economic and financial factors.", 
+            "known": "0"
+        },
+        {
+            "front": "Definition of technical analysis", 
+            "back": "Technical analysis is a trading discipline used to evaluate investments and identify trading opportunities by analyzing statistical trends gathered from trading activity.", 
+            "known": "0"
+        }
+    ],
+
+    "hard_cards":[
+        {
+            "front": "Definition of quantitative analysis in finance", 
+            "back": "Quantitative analysis in finance involves using mathematical and statistical techniques to model financial markets, assess investment opportunities, and manage risk.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of algorithmic trading", 
+            "back": "Algorithmic trading is the use of computer algorithms to automatically make trading decisions, submit orders, and manage those orders after submission.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of the Efficient Market Hypothesis (EMH)", 
+            "back": "The Efficient Market Hypothesis is an investment theory that states it is impossible to 'beat the market' because stock market efficiency causes existing share prices to always incorporate and reflect all relevant information.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of a derivative", 
+            "back": "A derivative is a financial security with a value that is reliant upon or derived from, an underlying asset or group of assets. A benchmark.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of the Black-Scholes model", 
+            "back": "The Black-Scholes model is a mathematical model for pricing an options contract. It helps estimate the variation over time of financial instruments.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of market liquidity", 
+            "back": "Market liquidity refers to the extent to which a market, such as a country's stock market or a city's real estate market, allows assets to be bought and sold at stable, transparent prices.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of a hedge fund", 
+            "back": "A hedge fund is an investment fund that pools capital from accredited individuals or institutional investors and invests in a variety of assets, often with complex portfolio-construction and risk management techniques.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of financial leverage", 
+            "back": "Financial leverage is the use of debt to increase the potential return of an investment. It involves borrowing capital to increase the potential return on equity.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of a credit default swap (CDS)", 
+            "back": "A credit default swap is a financial derivative that allows an investor to 'swap' or offset their credit risk with that of another investor.", 
+            "known": "0"
+        }, 
+        {
+            "front": "Definition of arbitrage", 
+            "back": "Arbitrage is the simultaneous purchase and sale of an asset to profit from a difference in the price. It is a trade that profits by exploiting the price differences of identical or similar financial instruments on different markets or in different forms.", 
+            "known": "0"
+        }
+    ]
+  }
+  

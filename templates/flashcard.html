@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcard Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='flashcard.css') }}">
+</head>
+<body>
+
+    <div class="box">
+
+        <div class="card-display">
+
+            <div class="card">
+
+                <div class="card-face card-front">
+                    <h3 class="word" id="card-front" data-card-id="{{ card.id }}">{{ card.front }}</h3>
+                </div>
+
+                <div class="card-face card-back">
+                    <h3 class="definition" id="card-back">{{ card.back }}</h3>
+                </div>
+
+            </div>
+            
+            <div class="cardbuttons">
+
+                <button class="knowbutton nextbutton">✔</button>
+                <button class="flipbutton">FLIP</button>
+                <button class="dontbutton nextbutton">X</button>
+                
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+    function updateCardStatusAndFetchNext(known) {
+
+        console.log($('#card-front')); // Check if the element is accessible
+        console.log($('#card-front').data('card-id')); // Check the data attribute
+
+        const cardId = $('#card-front').data('card-id');// Assuming you store card_id in data attribute
+
+        $.ajax({
+            url: '/update_card_status',
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify({ card_id: cardId, status: known ? 'known' : 'not_known' }),
+            success: function(response) {1
+                fetchNextCard();
+            },
+            error: function(error) {
+                console.log("Error updating card status:", error);
+            }
+        });
+    }
+
+    function fetchNextCard() {
+        $.ajax({
+            url: '/next_card',
+            type: 'POST',
+            contentType: 'application/json;charset=UTF-8',
+            success: function(card) {
+                $('#card-front').text(card.front).data('card-id', card.id);
+                $('#card-back').text(card.back);
+            },
+            error: function(error) {
+                console.log("Error loading next card:", error);
+            }
+        });
+    }
+
+    $(document).ready(function(){
+        $('.knowbutton').click(function() {
+            updateCardStatusAndFetchNext(true);
+        });
+        $('.dontbutton').click(function() {
+            updateCardStatusAndFetchNext(false);
+        });
+        $('.flipbutton').click(function() {
+            $('.card').toggleClass('flipped');
+        });
+    });
+    </script>
+</body>
+{% endblock %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hindsight</title>
+  </head>
+
+  <body>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div class="navbar">
+      <div class="logo">
+        <img src="{{ url_for('static', filename='Logo.png') }}">
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item"><a href="{{ url_for('welcome') }}" class="navbar__link">HOME</a></li>
+        <li class="navbar__menu__item"><a href="{{ url_for('news') }}" class="navbar__link">NEWS</a></li>
+        <li class="navbar__menu__item"><a href="{{ url_for('learn') }}" class="navbar__link">LEARN</a></li>
+        <!--Change this to have the URL Endpoint that points to the shorts page-->
+        <li class="navbar__menu__item"><a href="{{ url_for('shorts') }}" class="navbar__link">SHORTS</a></li>
+        <li class="navbar__menu__item"><a href="{{ url_for('forum') }}" class="navbar__link">FORUM</a></li>
+        {% if current_user.is_authenticated %}
+          <li class="navbar__menu__item special"><a href="{{ url_for('profile', username=current_user.username) }}" class="navbar__link">PROFILE</a></li>
+        {% else %}
+          <li class="navbar__menu__item special"><a href="{{ url_for('login') }}" class="navbar__link">LOGIN</a></li>
+        {% endif %}
+
+      </ul>
+    </div>
+  </body>
+</html>

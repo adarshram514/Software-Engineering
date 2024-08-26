@@ -1,0 +1,85 @@
+{
+    "questions": [
+      {
+        "question": "What does IPO stand for?",
+        "options": [
+          "International Profit Organization",
+          "Initial Public Offering",
+          "International Partnership Opportunity",
+          "Initial Private Ownership"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "What does ROI stand for in finance?",
+        "options": [
+          "Return on Investment",
+          "Rate of Interest",
+          "Risk of Inflation",
+          "Revenue on Investment"
+        ],
+        "answer": "0"
+      },
+      {
+        "question": "What is the primary function of a stock exchange?",
+        "options": [
+          "To sell products directly to consumers",
+          "To provide a platform for buying and selling shares of companies",
+          "To regulate the prices of goods in the market",
+          "To lend money to corporations"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "Which of the following is a measure of a stock's volatility?",
+        "options": [
+          "EPS (Earnings Per Share)",
+          "P/E Ratio (Price-to-Earnings Ratio)",
+          "Beta",
+          "Dividend Yield"
+        ],
+        "answer": "2"
+      },
+      {
+        "question": "What does the term 'bull market' refer to?",
+        "options": [
+          "A market characterized by declining prices",
+          "A market characterized by increasing prices",
+          "A market with stagnant prices",
+          "A market with fluctuating prices"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "What is the name for the strategy of investing in a diverse range of assets to spread risk?",
+        "options": [
+          "Concentrated portfolio",
+          "Diversification",
+          "Speculation",
+          "Market timing"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "Which of the following represents a 'blue-chip' stock?",
+        "options": [
+          "A newly established startup",
+          "A well-established company with a history of stable earnings",
+          "A speculative penny stock",
+          "A company that is facing bankruptcy"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "What does the term 'dividend' refer to?",
+        "options": [
+          "The total value of a company's assets",
+          "A portion of a company's profits paid to shareholders",
+          "The price of a stock on the day it is issued",
+          "The annual revenue of a company"
+        ],
+        "answer": "1"
+      }
+    ]
+  }
+  

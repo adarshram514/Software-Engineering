@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
+    <div class="security">
+        <h1 class="security-title">Security</h1>
+        <div class="security-main">
+            <div class="security-username">
+                <form class="security-username-form" method="POST" action="">
+                    {{ username_form.hidden_tag() }}
+                    <div class="security-username-item">
+                        <h3 class="security-username-item-name">Current Username</h3>
+                        <input type="text" id="current_username" name="current_username" value="{{ user.username }}" readonly>
+                    </div>
+                    <div class="security-username-item">
+                        <h3 class="security-username-item-name">New Username</h3>
+                        {{ username_form.new_username }}
+                    </div>
+                    <div class="security-username-item">
+                        <h3 class="security-username-item-name">Confirm New Username</h3>
+                        {{ username_form.confirm_new_username }}
+                    </div>
+                    <div class="security-username-item">
+                        {{ username_form.submit_username }}
+                    </div>
+                </form>
+            </div>
+            <span class='vertical-line'></span>
+            <div class="security-password">
+                <form class="security-password-form" method="POST" action="">
+                    {{ password_form.hidden_tag() }}
+                    <div class="security-password-item">
+                        <h3 class="security-password-item-name">Current Password</h3>
+                        {{ password_form.current_password }}
+                    </div>
+                    <div class="security-password-item">
+                        <h3 class="security-password-item-name">New Password</h3>
+                        {{ password_form.new_password }}
+                    </div>
+                    <div class="security-password-item">
+                        <h3 class="security-password-item-name">Confirm New Password</h3>
+                        {{ password_form.confirm_new_password }}
+                    </div>
+                    <div class="security-password-item">
+                        {{ password_form.submit_password }}
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="security-leave">
+            <a href="{{ url_for('profile', username=user.username) }}">Go back</a>
+        </div>
+    </div>
+{% endblock %}

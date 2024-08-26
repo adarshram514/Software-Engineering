@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+<style>
+    /* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 75%;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
+        width: 70%;
+        color: white;
+        text-align: center;
+        height: calc(100vh - 300px);
+        margin: 150px auto 2rem auto;
+        gap: 1.5rem;
+    }
+    h3 {
+        font-weight:  bold;
+        text-align: center;
+        margin: auto;
+        font-size: 50px;
+    }
+    button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    
+    }
+
+</style>
+<div class="content-wrapper">
+    <body>
+        {% if not flagged_var %}
+            <h3 id="video-status">Your short is rendering...</h3>
+            <script>
+              window.onload = function() {
+                  var checkVideo = setInterval(function() {
+                      fetch('{{ video_url }}').then(response => {
+                              if (response.ok) {
+                                document.getElementById('video-status').innerText = 'Your short is ready!';
+                                document.getElementById('video-source').src = '{{ video_url }}';
+                                document.getElementById('video-player').load();
+                                clearInterval(checkVideo);
+                                if(!document.createElement('video').canPlayType) {
+                                  document.getElementById('video-player').style.display = 'block';
+                                }
+                              }
+                          })
+                          .catch(console.error);
+                  }, 2000); // Check every 2 seconds
+              };
+          </script>
+          
+          <video id="video-player" width="320" height="240" controls>
+              <source id="video-source" src="" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+```             <button id="video-button" class="button-64" role="button" style="display: none;">Click to View Video</button>
+            </a>
+        {% endif %}
+        {% if flagged_var %}
+            <h3>This Post Violates Our Community Guidelines. Please Try Again</h3>
+        {% endif %}
+    <div class="button-container">
+        <a href="{{ url_for('shorts') }}" class="btn-grad">Go Back</a>
+    </div>
+
+    <div id="chatbot-container">
+      <input type="checkbox" id="toggle-chatbot" class="toggle-checkbox">
+      <label for="toggle-chatbot" id="toggle-label">Toggle Chatbot</label>
+      <div id="chatbot" class="chatbot-expanded">
+          <div class="chatbot-header">
+              <h3>Chatbot</h3>
+              <button id="close-chatbot">&times;</button> <!-- Close button -->
+          </div>
+          <div class="chatbot-body" id="chatbot-body">
+              <div class="message">Welcome to the Dr. Lehr bot! 👋</div>
+              <div class="message">How can I assist you? 🤔</div>
+          </div>
+          <div class="chatbot-footer">
+              <input type="text" id="user-input" placeholder="Type your message...">
+              <button id="send-message">Send</button>
+          </div>
+      </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
+  <script>
+      $(document).ready(function(){
+          $(document).on('click', '#send-message', function(e){
+              e.preventDefault();
+              var userInput = $('#user-input').val();
+              $.ajax({
+                  url: '/chatbot_response',
+                  data: JSON.stringify({ 'user_input': userInput, 'user_level': {{ user_level }}, 'user_xp': {{ user_xp }} }),
+                  type: 'POST',
+                  contentType: 'application/json;charset=UTF-8',
+                  success: function(response) {
+                      $('#chatbot-body').append('<div class="message">' + response.response + '</div>');
+                      $('#user-input').val('');
+                      $('#chatbot-body').scrollTop($('#chatbot-body')[0].scrollHeight); // Scroll to bottom
+                  },
+                  error: function(error) {
+                      console.log(error);
+                  }
+              });
+          });
+          $(document).on('click', '#close-chatbot', function(){
+              $('#chatbot-container').toggleClass('chatbot-expanded chatbot-collapsed');
+          });
+      });
+      </script>
+    </body>
+</div>
+{% endblock %}
+
+

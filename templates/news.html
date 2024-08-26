@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='news.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='chatbot.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>News</title>
+</head>
+<body class="body2">
+    <div class="navbar">
+      <div class="logo">
+        <img src="{{ url_for('static',filename='Logo.png') }}">
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item"><a href="{{ url_for('welcome') }}" class="navbar__link">HOME</a></li>
+      <li class="navbar__menu__item"><a href="{{ url_for('news') }}" class="navbar__link">NEWS</a></li>
+      <li class="navbar__menu__item"><a href="{{ url_for('learn') }}" class="navbar__link">LEARN</a></li>
+      <!--Change this to have the URL Endpoint that points to the shorts page-->
+      <li class="navbar__menu__item"><a href="{{ url_for('shorts') }}" class="navbar__link">SHORTS</a></li>
+      <li class="navbar__menu__item"><a href="{{ url_for('forum') }}" class="navbar__link">FORUM</a></li>
+      {% if current_user.is_authenticated %}
+        <li class="navbar__menu__item special"><a href="{{ url_for('profile', username=current_user.username) }}" class="navbar__link">PROFILE</a></li>
+      {% else %}
+        <li class="navbar__menu__item special"><a href="{{ url_for('login') }}" class="navbar__link">LOGIN</a></li>
+      {% endif %}
+    </ul>
+  </div>
+<div class="news_search">
+    <button onclick="" class="news_button">CryptoCurrency</button>
+    <button class="news_button">Stocks</button>
+    <button class="news_button">Forex</button>
+    <button class="news_button">ETFs</button>
+    <button class="news_button">Mutual Funds</button>
+    <button class="news_button">Bonds</button>
+    <input type='text' class="news_input" placeholder="Custom Search">
+</div>
+<div id="news_story_container">
+</div>
+
+<!-- url_to default news image -->
+<script>
+var defaultImageUrl = "{{ url_for('static', filename='default_image.png') }}";
+</script>
+
+  <!-- JavaScript code -->
+</div>
+
+<!-- url_to default news image -->
+<script>
+var defaultImageUrl = "{{ url_for('static', filename='default_image.png') }}";
+</script>
+
+<!-- JavaScript code -->
+<script>
+$(document).ready(function(){
+    var defaultCategory = 'Finance';
+    fetchNews(defaultCategory);
+
+    $(".news_button").click(function(){
+        var category = $(this).text();
+        fetchNews(category);
+    });
+
+    // Handle Enter key press in search input
+    $('.news_input').keypress(function(e) {
+        if (e.which == 13) { // 13 is the ASCII code for the Enter key
+            var category = $(this).val(); // Get the search input value
+            fetchNews(category);
+            return false; // Prevent the default action of the Enter key (form submission)
+        }
+    });
+
+    function fetchNews(category) {
+        $.ajax({
+            url: '/get_news',
+            type: 'get',
+            data: { 'category': category },
+            success: function(response) {
+                $('#news_story_container').empty();
+                $.each(response.results, function(i, news) {
+                    var title = news.title
+                    var description = news.description
+                    var link = news.link
+                    var imageUrl = news.image_url;
+                    if (!imageUrl || imageUrl.trim() === '') {
+                        imageUrl = defaultImageUrl;
+                    }
+                    $('#news_story_container').append(
+                        '<div class="news_article">' +
+                            '<div class="news_image">' +
+                                '<img src="' + imageUrl + '" alt="news_image" class="news_image">' +
+                            '</div>' +
+                            '<div class="news_content">' +
+                                '<h2 class="news_title">' + title + '</h2>' +
+                                '<p class="news_description">' + description + '</p>' +
+                                '<a href="' + link + '" target="_blank" class="news_link">Read More</a>' +
+                            '</div>' +
+                        '</div>'
+                    );
+                });
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                $('#news_story_container').html('<p>An error occurred while fetching the news data: ' + textStatus + '</p>');
+            }
+        });
+    }
+});
+</script>
+
+<div id="chatbot-container">
+    <input type="checkbox" id="toggle-chatbot" class="toggle-checkbox">
+    <label for="toggle-chatbot" id="toggle-label">Toggle Chatbot</label>
+    <div id="chatbot" class="chatbot-expanded">
+        <div class="chatbot-header">
+            <h3>Chatbot</h3>
+            <button id="close-chatbot">&times;</button> <!-- Close button -->
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="message">Welcome to the Dr. Lehr bot! 👋</div>
+            <div class="message">How can I assist you? 🤔</div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on('click', '#send-message', function(e){
+            e.preventDefault();
+            var userInput = $('#user-input').val();
+            $.ajax({
+                url: '/chatbot_response',
+                data: JSON.stringify({ 'user_input': userInput, 'user_level': {{ user_level }}, 'user_xp': {{ user_xp }} }),
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                success: function(response) {
+                    $('#chatbot-body').append('<div class="message">' + response.response + '</div>');
+                    $('#user-input').val('');
+                    $('#chatbot-body').scrollTop($('#chatbot-body')[0].scrollHeight); // Scroll to bottom
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+        $(document).on('click', '#close-chatbot', function(){
+            $('#chatbot-container').toggleClass('chatbot-expanded chatbot-collapsed');
+        });
+    });
+    </script>
+</body>
+</html>

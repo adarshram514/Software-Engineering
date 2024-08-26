@@ -1,0 +1,115 @@
+*{
+    --screen-width: 17vw;
+}
+#chatbot-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: var(--screen-width);
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #toggle-chatbot {
+    display: none;
+  }
+  
+  #toggle-label {
+    display: none;
+  }
+  
+  #chatbot {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: black;
+  }
+  
+  .chatbot-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f5f5f5;
+    width: 100%;
+  }
+  
+  .chatbot-header h3 {
+    margin: 0;
+  }
+  
+  #close-chatbot {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .chatbot-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .chatbot-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #f5f5f5;
+    width: var(--screen-width);
+  }
+  
+  #user-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #send-message {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #send-message:hover {
+    background-color: #0056b3;
+  }
+  
+  .chatbot-collapsed {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .chatbot-expanded {
+    width: var(--screen-width);
+    height: 500px;
+    border-radius: 10px;
+  }
+  
+  #chatbot-container.chatbot-collapsed {
+    display: none !important;
+  }
+  
+  .card-display{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }

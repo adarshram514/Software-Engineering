@@ -1,0 +1,310 @@
+{
+    "easy_questions": [
+      {
+        "question": "Definition of a stock",
+        "options": [
+          "A certificate of debt issued by the government",
+          "A type of bond",
+          "A representation of ownership in a company. When you buy it, you own a piece of that company.",
+          "A type of derivative"
+        ],
+        "answer": "2"
+      },
+      {
+        "question": "Definition of the stock market",
+        "options": [
+          "A market where currencies are traded",
+          "A collection of markets where pieces of ownership in businesses are bought and sold.",
+          "A market for exchanging commodities",
+          "A market for real estate trading"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "Definition of a dividend",
+        "options": [
+          "The interest paid on a bond",
+          "A portion of a company's earnings that is paid to shareholders, or people who own that company's stock.",
+          "A charge for currency exchange",
+          "A fee charged for the transfer of stock"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "Definition of a bull market",
+        "options": [
+          "A period during which stock prices are rising or are expected to rise.",
+          "A market dominated by bulls",
+          "A market with stagnant prices",
+          "A period during which stock prices are falling or are expected to fall."
+        ],
+        "answer": "0"
+      },
+      {
+        "question": "Definition of a bear market",
+        "options": [
+          "A market with excessive volatility",
+          "A market dominated by bears",
+          "A period during which stock prices are falling or are expected to fall.",
+          "A period during which stock prices are rising or are expected to rise."
+        ],
+        "answer": "2"
+      },
+      {
+        "question": "IPO acronym",
+        "options": [
+          "Initial Price Offer",
+          "Internal Public Operations",
+          "International Purchase Option",
+          "Initial Public Offering"
+        ],
+        "answer": "3"
+      },
+      {
+        "question": "Definition of a brokerage",
+        "options": [
+          "A type of bank",
+          "A firm that facilitates the buying and selling of investments, like stocks, from a stock exchange.",
+          "A regulatory body for finance",
+          "A type of insurance company"
+        ],
+        "answer": "1"
+      },
+      {
+        "question": "Definition of a stock index",
+        "options": [
+          "A measurement of a section of the stock market. It is computed from the prices of selected stocks.",
+          "A list of companies banned from trading",
+          "A statistical measure of change in an economy",
+          "A government-issued list of approved stocks"
+        ],
+        "answer": "0"
+      },
+      {
+        "question": "Definition of blue-chip stocks",
+        "options": [
+          "Stocks with high volatility",
+          "Stocks from new and unstable companies",
+          "Shares of unknown financial value",
+          "Shares in large, reputable companies known for their ability to endure tough market conditions and generate profits."
+        ],
+        "answer": "3"
+      },
+      {
+        "question": "Definition of market capitalization",
+        "options": [
+          "The total number of markets in a country",
+          "The total market value of a company's outstanding shares of stock.",
+          "The capital required to start a new market",
+          "A measure of profitability in the retail sector"
+        ],
+        "answer": "1"
+      }
+    ],
+    "medium_questions": [
+      {
+        "question": "Definition of P/E ratio",
+        "options": [
+            "Price-to-Book ratio is a valuation metric used to compare a firm's market to book value.",
+            "Price-to-Earnings ratio is a valuation metric used to measure a company's current share price relative to its per-share earnings.",
+            "Profit-to-Earnings ratio, a measure of the earnings a company generates from its investments.",
+            "Payment-to-Employees ratio, a financial metric analyzing how much companies pay their employees relative to profits."
+        ],
+        "answer": "1"
+       },
+       {
+         "question": "Definition of short selling",
+         "options": [
+            "Short selling is a trading strategy that speculates on the increase in a stock or other securities price.",
+            "Short selling is a long-term investment strategy focused on stability.",
+            "Short selling is the practice of selling assets after long-term holding.",
+            "Short selling is a trading strategy that speculates on the decline in a stock or other securities price."
+        ],
+        "answer": "3"
+        },
+        {
+            "question": "Definition of ETFs",
+            "options": [
+              "Exchange-Traded Funds are government-issued financial instruments.",
+              "Exchange-Traded Funds are private investment partnerships open only to wealthy investors.",
+              "Exchange-Traded Funds are investment funds that are traded on stock exchanges, much like stocks. They hold assets such as stocks, commodities, or bonds.",
+              "Exchange Trading Funds are financial tools used exclusively in currency exchange markets."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of a bond",
+            "options": [
+              "A bond is a flexible investment where the return changes with market conditions.",
+              "A bond is a fixed income investment in which an investor loans money to an entity (corporate or governmental) that borrows the funds for a defined period at a fixed interest rate.",
+              "A bond is a type of stock that represents ownership in a corporation.",
+              "A bond is a type of insurance product that provides investment income."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of portfolio diversification",
+            "options": [
+              "Portfolio concentration, focusing investment in a single sector to maximize gains.",
+              "Portfolio diversification is an investment strategy that involves investing solely in stock markets.",
+              "Portfolio diversification is an investment strategy that involves spreading your investments across various asset classes to reduce risk.",
+              "Portfolio diversification is a strategy used only by hedge funds to manage their large investments."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of a mutual fund",
+            "options": [
+              "A mutual fund is a type of insurance fund available to shareholders.",
+              "A mutual fund is a government-backed investment vehicle.",
+              "A mutual fund is an investment program funded by shareholders that trades in diversified holdings and is professionally managed.",
+              "A mutual fund is an exclusive investment club that limits membership to certain individuals."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of a limit order",
+            "options": [
+              "A limit order is an instruction to perform unlimited trades at variable prices.",
+              "A limit order is an order to buy or sell a stock at a specific price or better.",
+              "A limit order is an order that is automatically canceled if not filled within a day.",
+              "A limit order is a non-binding agreement between a buyer and a seller."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of a market order",
+            "options": [
+              "A market order is an order to sell a stock at any price.",
+              "A market order is a type of derivative trade.",
+              "A market order is an order to buy or sell a stock at the best available price.",
+              "A market order is an order that specifies a purchase of bonds only."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of fundamental analysis",
+            "options": [
+              "Fundamental analysis is a method of analyzing stocks based solely on market trends.",
+              "Fundamental analysis is a method of measuring a stock's intrinsic value by examining related economic and financial factors.",
+              "Fundamental analysis is a quick calculation to determine the viability of a short-term investment.",
+              "Fundamental analysis is the examination of currency values only."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of technical analysis",
+            "options": [
+              "Technical analysis is a field of economics that focuses on market infrastructure.",
+              "Technical analysis is a trading discipline used to evaluate investments and identify trading opportunities by analyzing statistical trends gathered from trading activity.",
+              "Technical analysis involves the physical inspection of goods before investment.",
+              "Technical analysis is the study of company fundamentals to predict stock performance."
+            ],
+            "answer": "1"
+          }
+        ],
+
+        "hard_questions": [
+          {
+            "question": "Definition of quantitative analysis in finance",
+            "options": [
+              "Quantitative analysis in finance involves using mathematical and statistical techniques to model financial markets, assess investment opportunities, and manage risk.",
+              "Quantitative analysis is the study of historical market data, excluding mathematical models.",
+              "Quantitative analysis involves a qualitative assessment of market moods and investor sentiment.",
+              "Quantitative analysis in finance is purely based on guesswork and speculation."
+            ],
+            "answer": "0"
+          },
+          {
+            "question": "Definition of algorithmic trading",
+            "options": [
+              "Algorithmic trading is a manual trading strategy that requires traders to execute orders based on gut feelings.",
+              "Algorithmic trading is the use of computer algorithms to automatically make trading decisions, submit orders, and manage those orders after submission.",
+              "Algorithmic trading refers to a style of trading that exclusively involves commodities.",
+              "Algorithmic trading is a regulatory framework for controlling electronic trading."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of the Efficient Market Hypothesis (EMH)",
+            "options": [
+              "The Efficient Market Hypothesis is a theory that prices in the market are always low.",
+              "The Efficient Market Hypothesis states that all investors have equal access to all information at all times.",
+              "The Efficient Market Hypothesis is an investment theory that states it is impossible to 'beat the market' because stock market efficiency causes existing share prices to always incorporate and reflect all relevant information.",
+              "The Efficient Market Hypothesis suggests that markets are perpetually unstable."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of a derivative",
+            "options": [
+              "A derivative is a basic security traded between two parties.",
+              "A derivative is a fixed income tool that always yields a steady return.",
+              "A derivative is a financial security with a value that is reliant upon or derived from, an underlying asset or group of assets. A benchmark.",
+              "A derivative is a type of insurance policy for tangible assets."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of the Black-Scholes model",
+            "options": [
+              "The Black-Scholes model is a type of economic model that predicts consumer behavior.",
+              "The Black-Scholes model is a mathematical model for pricing an options contract. It helps estimate the variation over time of financial instruments.",
+              "The Black-Scholes model is a governmental policy tool used in fiscal planning.",
+              "The Black-Scholes model is a psychological theory that explains investor decision-making."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of market liquidity",
+            "options": [
+              "Market liquidity refers to the ease of converting bonds into cash.",
+              "Market liquidity refers to the ease with which a company can obtain market data.",
+              "Market liquidity refers to the extent to which a market, such as a country's stock market or a city's real estate market, allows assets to be bought and sold at stable, transparent prices.",
+              "Market liquidity is a measure of how quickly a market is growing."
+            ],
+            "answer": "2"
+          },
+          {
+            "question": "Definition of a hedge fund",
+            "options": [
+              "A hedge fund is a type of mutual fund that focuses on long-term investments.",
+              "A hedge fund is an investment fund that pools capital from accredited individuals or institutional investors and invests in a variety of assets, often with complex portfolio-construction and risk management techniques.",
+              "A hedge fund is a government-backed retirement plan.",
+              "A hedge fund is a small, private investment intended for beginning investors."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of financial leverage",
+            "options": [
+              "Financial leverage is the use of personal finances to enhance personal spending power.",
+              "Financial leverage is the use of debt to increase the potential return of an investment. It involves borrowing capital to increase the potential return on equity.",
+              "Financial leverage is a method of avoiding taxes through international banking.",
+              "Financial leverage refers to the liquidation of assets in response to financial hardship."
+            ],
+            "answer": "1"
+          },
+          {
+            "question": "Definition of a credit default swap (CDS)",
+            "options": [
+              "A credit default swap is a financial derivative that allows an investor to 'swap' or offset their credit risk with that of another investor.",
+              "A credit default swap is a long-term loan agreement between a bank and a consumer.",
+              "A credit default swap is a bond issued by credit card companies to finance consumer debt.",
+              "A credit default swap is a type of insurance policy covering loan defaults."
+            ],
+            "answer": "0"
+          },
+          {
+            "question": "Definition of arbitrage",
+            "options": [
+              "Arbitrage is the process of buying insurance policies from different countries to cover the same risk.",
+              "Arbitrage is the simultaneous purchase and sale of an asset to profit from a difference in the price. It is a trade that profits by exploiting the price differences of identical or similar financial instruments on different markets or in different forms.",
+              "Arbitrage is the act of buying real estate in different states to take advantage of varying tax laws.",
+              "Arbitrage involves investing in multiple currencies to take advantage of fluctuating exchange rates."
+            ],
+            "answer": "1"
+          }
+        ]
+      }
+  

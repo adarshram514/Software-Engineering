@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Forum</title>
+{% endblock %}
+
+{% block content %}
+    <h2>Forum Page</h2>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .profile-photo {
+            width: 50px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+    <div class="terms">
+        <header>
+            <h1>Hindsight Community Forum</h1>
+        </header>
+        
+        <section id="post-form">
+            <h2>Create a Post</h2>
+            <form action="/submit_post" method="post">
+                <label for="post-title">Title:</label><br>
+                <input type="text" id="post-title" name="post-title"><br>
+                <label for="post-content">Content:</label><br>
+                <textarea id="post-content" name="post-content"></textarea><br>
+                <button type="submit">Submit Post</button>
+            </form>
+        </section>
+        
+        <section id="posts">
+            <h2>Recent Posts</h2>
+            {% for post in posts %}
+            <div class="post">
+                <h3>{{ post.title }}</h3>
+                {% if post.profile_photo %}
+                    <img src="{{ post.profile_photo }}" alt="Profile Photo" class="profile-photo">
+                {% endif %}
+                <p>{{ post.username }}</p>
+                <p>Time: {{ post.timestamp }}</p>
+                <p>{{ post.content }}</p>
+                <p>Likes: {{ post.likes }}</p>
+                <p>Dislikes: {{ post.dislikes }}</p>
+
+                <form action="/submit_comment/{{ loop.index0 }}" method="post">
+                    <label for="comment-text">Add a comment:</label><br>
+                    <textarea id="comment-text" name="comment-text"></textarea><br>
+                    <button type="submit">Submit Comment</button>
+                </form>
+
+                {% if post.comments %}
+                <div class="comments">
+                    <h4>Comments:</h4>
+                    {% for comment in post.comments %}
+                    <p>{{ comment.username }}: {{ comment.text }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                <form action="/like_post/{{ loop.index0 }}" method="post">
+                    <button type="submit" class="like-button">Like</button>
+                </form>
+                <form action="/dislike_post/{{ loop.index0 }}" method="post">
+                    <button type="submit" class="dislike-button">Dislike</button>
+                </form>
+            </div>
+            {% endfor %}
+        </section>
+        <footer>
+            <p>&copy; 2024 Hindsight Community Forum.</p>
+        </footer>
+    </div>
+{% endblock %}

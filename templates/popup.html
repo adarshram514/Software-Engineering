@@ -1,0 +1,67 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <style>
+        @keyframes slideFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideFadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+
+        .popup {
+            position: fixed;
+            right: 20px;
+            top: 100px; /* Adjust if necessary to not overlap your header */
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background: rgb(125, 158, 207);
+            border: thick double rgb(255, 255, 255);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            border-radius: 10px;
+            opacity: 0; /* Start initially hidden */
+            transform: translateY(-20px); /* Start slightly above the final position */
+            animation: slideFadeIn 0.5s forwards; /* Animation plays forward to end state */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var popup = document.createElement("div");
+            popup.className = "popup";
+            popup.textContent = "{{ messages[0] }}"; // Assuming you want to display the first message
+
+            document.body.appendChild(popup);
+
+            // Set timeout to remove the popup smoothly
+            setTimeout(function() {
+                // Begin the fade-out and slide-up animation
+                popup.style.animation = "slideFadeOut 0.5s forwards";
+
+                // Remove the popup from the DOM after the animation completes
+                setTimeout(function() {
+                    document.body.removeChild(popup);
+                }, 500); // Delay must match the duration of the fade-out animation
+            }, 5000); // Popup stays visible for 5 seconds before fading out
+        });
+    </script>
+    {% endif %}
+{% endwith %}

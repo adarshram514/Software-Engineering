@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+<title>Login</title>
+    <div class="login__content">
+        <h2 class="login__heading">Login</h2>
+        <form class="login__form" method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="login__form__item">
+                <h3 class="login__form__item__name">Username</h3>
+                {{ form.username (class="form-control", placeholder="")}}
+            </div>
+            <div class="login__form__item">
+                <h3 class="login__form__item__name">Password</h3>
+                {{ form.password (class="form-control", placeholder="")}}
+            </div>
+            <div class="login__form__item">
+                {{ form.submit }}
+            </div>
+        </form>
+        <div class="login__create">
+            <p>Don't have an account? <a href="{{ url_for('register') }}"><u>Create Account</u></a>
+            </p>
+        </div>
+        <div class="login__create">
+            <p><a href="{{ url_for('reset_password_request') }}"><u>Forgot Password? </u></a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
+    

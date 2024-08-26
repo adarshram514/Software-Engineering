@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+<div class="terms">
+    <h4>HindSight Shorts</h4>
+</div>
+<div class = "prompt-container">
+    <div class = "prompt-form">
+        <form action="/handle_form" method="post">
+        <label for="freeform">How would you like to expand your knowledge:</label>
+        <textarea id="freeform" name="freeform" placeholder="Enter prompt here..." rows="4"></textarea>
+        <div class="button-container">
+            <button name='action' value='clear' class="btn-grad">Clear</button>
+            <button name='action' value='submit' class="btn-grad2">Submit</button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

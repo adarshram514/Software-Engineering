@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Daily Page</h2>
+    <h1>Hello,{{current_user.username}}!</h1>
+    <p>
+        <a href="{{url_for('logout')}}">Logout</a><br>
+    </p>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}

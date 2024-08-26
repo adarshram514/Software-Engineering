@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}"> 
+<div class="custom-picture-form">
+    <h1>Customize the profile picture</h1>
+    <span class='short-line'></span>
+    <form class="custom_pic_form" method="POST" action="">
+        {{ form.csrf_token }}
+        <div class="custom_pic_form_main">
+            <div class="radio-buttons-left">
+                <h3 class="custom_pic_form_title" style="margin-top: 20px;">Gender</h3>
+                <div class="custom_pic_form_labels">
+                    {% for gender_radio in form.gender_option %}
+                    <div class="label-item">
+                        <label class="radio-label">
+                            {{ gender_radio }}
+                            {{ gender_radio.label.text }}
+                        </label>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+            <div class="radio-buttons-right">
+                <h3 class="custom_pic_form_title">Profile Type</h3>
+                <div class="custom_pic_form_labels">
+                    {% for role_radio in form.role_option %}
+                    <div class="label-item">
+                        <label class="radio-label">
+                            {{ role_radio }}
+                            {{ role_radio.label.text }}
+                        </label>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="custom_pic_form_button">
+            {{ form.submit }}
+        </div>
+    </form>
+</div>
+{% endblock %}

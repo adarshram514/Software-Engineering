@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
+    <div class="reset-password-token">
+        <form class="reset-password-token-form" method="POST" action="">
+            {{ form.hidden_tag() }}
+            <h1 class="reset-password-token-title">Reset Password</h1>
+            <div class="reset-password-token-form-item">
+                <h3 class="reset-password-token-form-item-name">New Password</h3>
+                {{ form.password }}
+            </div>
+            <div class="reset-password-token-form-item">
+                <h3 class="reset-password-token-form-item-name">Confirm New Password</h3>
+                {{ form.confirm_password }}
+            </div>
+            <div class="reset-password-token-form-item">
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

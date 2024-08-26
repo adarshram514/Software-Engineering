@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Skill Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+
+    <div class="box">
+
+
+    <div class="quiz__content">
+        <form class="quiz__form" method="POST" action="">
+            {{ form.hidden_tag() }}
+            {% for field in form %}
+                {% if field.type != "CSRFTokenField" and field.type != "SubmitField" %}
+                    <div class="quiz__form__item">
+                        <h3 class="quiz__form__item__name">{{ field.label }}</h3>
+                        {{ field(class="form-control", placeholder="") }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="quiz__form__item__choice">
+                {{ form.submit(class="submit-button") }}
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+{% endblock %}

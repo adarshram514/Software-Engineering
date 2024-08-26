@@ -1,0 +1,357 @@
+body {
+    background-image: linear-gradient(#0B1089 0%, #000000 26%);
+    background-repeat:no-repeat;
+}
+
+.profile {
+    display: flex;
+    margin: 150px 0;
+    min-width: 800px;
+}
+
+.security,
+.password-reset-request,
+.reset-password-token,
+.inactive,
+.custom-picture-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 800px;
+    height: calc(100vh - 100px);
+    margin: 150px auto 2rem auto;
+    gap: 1.5rem;
+    color: rgb(231, 227, 227);
+}
+
+.inactive {
+    justify-content: center;
+    align-items: center;
+}
+
+.profile,
+.security,
+.password-reset-request,
+.reset-password-token,
+.inactive,
+.custom-picture-form {
+    font-family: 'Open Sans Hebrew', serif;
+    font-size: 1.5rem;
+    color: rgb(231, 227, 227);
+}
+
+.profile-info-image img {
+    height: 350px;
+    width: 350px;
+    background-color: rgb(50, 51, 53);
+}
+
+.profile-info-image-button,
+.profile-logout,
+.profile-info-upload button[type="submit"],
+.inactive-link,
+.profile-info-generate,
+.custom_pic_form_button [type="submit"]{
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 350;
+    margin: 25px 10%;
+    background-color: #4423ba;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: rgb(246, 244, 244);
+    padding: 15px 35px;
+    border-radius: 35px;
+    border: none;
+}
+
+.custom_pic_form_button{
+    display: flex;
+    justify-content: center;
+}
+
+.inactive-link {
+    width: 40%;
+}
+
+.profile-info-upload button[type="submit"] {
+    margin: 25px 0;
+    width: 450px;
+    border-radius: 35px;
+    border: none;
+}
+
+.profile-info-image-button{
+    width: 400px;
+    margin: 15px auto;
+    border: none;
+}
+
+.profile-info-image-button:hover,
+.profile-change-buttons-item:hover,
+.profile-logout:hover,
+.profile-info-upload button[type="submit"]:hover,
+.inactive-link:hover,
+.profile-info-generate:hover,
+.custom_pic_form_button [type="submit"]:hover {
+    background-color: rgb(142, 179, 236);
+    transform: scale(1.05);
+    color: white;
+}
+
+.profile-change-buttons-item:hover {
+    background-color: rgba(142, 179, 236, 0.2);
+}
+
+.profile-title,
+.profile-info, 
+.profile-logout,
+.security-title,
+.password-reset-request-form-title,
+.reset-password-token-title,
+.inactive-link,
+.inactive-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.security-title {
+    margin-bottom: 0px;
+}
+
+.profile-title {
+    margin-top: 30px
+}
+
+.profile-data {
+    background-image: linear-gradient(#0B1089 0%, #000000 25%);
+    margin: 0 30px 0 25%;
+    width: 50%;
+    border: 0.1px solid #0B1089;
+    border-radius: 35px;
+}
+
+.profile-experience  {
+    margin: 0 30px;
+    width: 25%;
+}
+
+.security-main {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background-image: linear-gradient(#0B1089 0%, #000000 62%);
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 45px;
+}
+
+.security-username,
+.security-password {
+    width: 38%;
+
+}
+
+.profile-info-item,
+.profile-change-buttons-item{
+    margin: 0 10%;
+    padding: 10px;
+    display: flex;
+    border-radius: 35px;
+}
+
+.profile-info-item.username {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.profile-info-item span {
+    text-align: right;
+    justify-content: end;
+    margin-right: 0;
+}
+
+.profile-change {
+    margin: 20px 0;
+}
+
+.profile-change-buttons-item{
+    font-weight: 550;
+    margin-bottom: 10px;
+    color: rgb(142, 179, 236);
+}
+
+.security-username-item-name,
+.security-password-item-name,
+.password-reset-request-item-name,
+.reset-password-token-form-item-name {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 250;
+    margin-bottom: 1rem;
+}
+
+.security-username-item,
+.security-password-item,
+.reset-password-token-form-item {
+    margin-bottom: 1rem;
+}
+
+.security-username-form input[type="text"],
+.security-password-form input[type="text"],
+.security-username-form input[type="password"],
+.security-password-form input[type="password"],
+.password-reset-request-form input[type="text"],
+.reset-password-token-form input[type="password"] {
+    width: 95%; 
+    height: 1rem;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#current_username[readonly] {
+    color: #777777;
+    cursor: not-allowed;
+}
+
+.security-username-form input[type="submit"],
+.security-password-form input[type="submit"],
+.password-reset-request-form input[type="submit"],
+.reset-password-token-form-item input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 3rem;
+    padding: 0.5rem 0.75rem;
+    margin-top: 2rem;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 350;
+    background-color: white;
+    border-radius: 45px;
+    border: none;
+}
+
+.security-username-form input[type="submit"]:hover,
+.security-password-form input[type="submit"]:hover,
+.password-reset-request-form input[type="submit"]:hover,
+.reset-password-token-form-item input[type="submit"]:hover
+{
+    background: rgb(188, 188, 188);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.security-leave {
+    margin-top: 2rem;
+    margin-right: 0;
+}
+
+.security-leave a:hover {
+    color: rgb(139, 138, 138);
+}
+
+.vertical-line{
+    border-left: 0.2px solid #0B1089;
+}
+
+.short-line {
+    display: block;
+    width: 80%;
+    border-top: 0.2px solid #0B1089;
+}
+
+hr {
+    border: 0.2px solid #0B1089;
+}
+
+.profile-info-upload {
+    margin: 0 10%;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.profile-info-generate {
+    display: flex;
+    justify-content: center; 
+    margin: 10px auto;
+    width: 450px;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-radius: 35px;
+}
+
+.profile-info-upload input[type="file"] {
+    font-family: "Kumbh Sans", sans-serif;
+    padding: 10px;
+    font-size: 26px;
+    border: 1px solid rgb(142, 179, 236);
+    border-radius: 5px;
+    font-weight: 350;
+    margin: 0 0 25px 0;
+    width: 350px;
+}
+
+.bar{
+    font-size: 24px;
+}
+
+.info span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 20px;
+    background-color: lightgray;
+    overflow: hidden;
+}
+
+.progress-bar{
+    position: absolute;
+    height: 100%;
+    background-color: fuchsia;
+}
+
+.experience-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color:aliceblue;
+}
+
+.radio-buttons-left,
+.radio-buttons-right {
+    margin-bottom: 40px;
+}
+
+.custom_pic_form_title {
+    margin-bottom: 10px;
+}
+
+.custom_pic_form_labels{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.label-item {
+    width: 50%; 
+    margin: 5px 0; 
+}
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"]:checked {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}

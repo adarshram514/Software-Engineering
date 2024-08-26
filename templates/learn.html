@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='learn.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerone">
+            <p class="first">Welcome to the LEARN page...</p>
+            <p>Study your vocabulary terms to gain XP and master your finical literacy</p>
+        </div>
+
+    <div class="container">
+        <div class="box">
+            <a href="{{ url_for('flashcard') }}">
+                <button>
+                    <img src="{{ url_for('static', filename='FlashCard.png') }}" alt="Flashcard Icon" class="flash_card_img">
+                    <span class="button_text">your flashcards</span>
+                    <span class="top_text">STUDY</span>
+                </button>
+            </a>
+        </div>
+        <div class="box">
+            <a href="{{ url_for('practice_quiz') }}">
+                <button>
+                    <img src="{{ url_for('static', filename='Quiz.png') }}" alt="Quiz Icon" class="quiz_card_img">
+                    <span class="button_text">your knowledge</span>
+                    <span class="top_text">QUIZ</span>
+                </button></a>
+        </div>
+    </div>
+</div>
+      
+</body>
+{% endblock %}

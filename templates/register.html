@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+<title>Register</title>
+    <div class="register__content">
+        <h2 class="register__heading">Create Account</h2>
+        <form class="register__form" method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="register__form__item">
+                <h3 class="register__form__item__name">Username</h3>
+                {{ form.username (class="form-control", placeholder="")}}
+                <button type="button" id="generateUsernameBtn">generate username</button>
+            </div>
+            <div class="register__form__item">
+                <h3 class="register__form__item__name">Email</h3>
+                {{ form.email }}
+            </div>
+            <div class="register__form__item">
+                <h3 class="register__form__item__name">Password</h3>
+                {{ form.password }}
+            </div>
+            <div class="register__form__item">
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='generate_username.js') }}"></script>
+{% endblock %}

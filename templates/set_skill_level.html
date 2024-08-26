@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Set Skill Level</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='setskill.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+</head>
+<body>
+
+    <div id="initialContent" class="popup">
+
+    <div class="popupcontent">
+        <p class="dontknowskill">Don't know your skill level?</p>
+        <div class="contain">
+        <a href="{{ url_for('skill_quiz') }}"><button id="quiz">TAKE THE QUIZ</button></a>
+        <p class="decide">or choose your skill level</p>
+        <form class="popupbuttons" action="{{ url_for('handle_skill_buttons') }}" method="post">
+            <button id="beginnerButton" type="submit" name="action" value="b">BEGINNER</button>
+            <button id="intermediateButton" type="submit" name="action" value="i">INTERMEDIATE</button>
+            <button id="advancedButton" type="submit" name="action" value="a">ADVANCED</button>
+        </form>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+{% endblock %}
+
+    <!--
+    <script>
+        function changeContentDisplay() {
+            document.getElementById('initialContent').style.display = 'none';
+            document.getElementById('learningContent').style.display = 'flex';
+        }
+
+        document.getElementById('beginnerButton').onclick = changeContentDisplay;
+        document.getElementById('intermediateButton').onclick = changeContentDisplay;
+        document.getElementById('advancedButton').onclick = changeContentDisplay;
+
+    </script>
+    -->
